@@ -15,7 +15,7 @@ const CardRecive = ({  cardPromise ,isSelected , setIsSelected }: ICardRecivePor
 
   return (
     <>
-      <div className="grid grid-cols-12 container mx-auto gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-12 container mx-auto gap-4">
         <div className="col-span-9">
           <CardSection isSelected={isSelected} setIsSelected={setIsSelected} cardPromise={cardPromise}></CardSection>
         </div>

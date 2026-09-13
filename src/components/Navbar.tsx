@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center container mx-auto   py-5 ">
         <span className="block md:hidden text-3xl px-5"><FiAlignJustify /></span>
         <img src={myImg} alt="" />
-        <ul className=" flex hidden  gap-5 items-center">
+        <ul className=" hidden md:flex  gap-5 items-center">
           <li>
             <a href="">Home</a>
           </li>

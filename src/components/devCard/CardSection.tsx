@@ -29,7 +29,7 @@ const CardSection = ({ isSelected, setIsSelected, cardPromise }: IcardType) => {
   };
 
   return (
-    <div className="grid grid-cols-3 container mx-auto gap-4">
+    <div className="grid grid-cols-1 lg:grid-cols-3 container mx-auto gap-4">
       {cards.map((card: ICard) => {
         return (
           <div
