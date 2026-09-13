@@ -2,8 +2,8 @@ import { FiAlignJustify } from "react-icons/fi";
 import myImg from "../assets/logo-text.png";
 const Navbar = () => {
   return (
-    <nav className="border-b sticky top-0  z-50 border-gray-100 bg-white">
-      <div className="flex justify-between items-center container mx-auto   py-5 ">
+    <nav className=" container mx-auto  border-b sticky top-0  z-50 border-gray-100">
+      <div className="flex justify-between items-center   py-5 ">
         <span className="block md:hidden text-3xl px-5"><FiAlignJustify /></span>
         <img src={myImg} alt="" />
         <ul className=" hidden md:flex  gap-5 items-center">
