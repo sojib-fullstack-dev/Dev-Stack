@@ -1,6 +1,7 @@
-import { use, useState, type Dispatch, type SetStateAction } from "react";
-import type { ICard } from "../type";
+import { use, type Dispatch, type SetStateAction } from "react";
 import { Bounce, toast } from "react-toastify";
+import type { ICard } from "../../type";
+import { AiOutlineCheck } from "react-icons/ai";
 
 export interface IcardType {
   cardPromise: Promise<ICard[]>;
@@ -80,10 +81,17 @@ const CardSection = ({ isSelected, setIsSelected, cardPromise }: IcardType) => {
             {/* Button */}
             <button
               onClick={() => handleSelectedProps(card)}
-              className={`w-full bg-[#111827] text-white text-sm py-2 rounded-lg hover:bg-gray-800 transition`}
-            >
-              {isSelected.filter((item) => item === card.id)
-                ? "Add To Cart "
+              disabled={isSelected.filter((item)=>item.id===card.id).length>0}
+              className="w-full bg-[#111827] text-white cursor-pointer py-2  rounded-lg
+                             border border-transparent
+                            hover:bg-gray-800 transition
+                            disabled:bg-red-600"  >
+          
+              {isSelected.filter((item) => item.id === card.id).length>0
+                ? (<div className="flex justify-center gap-1 items-center">
+                       <AiOutlineCheck/>
+                  Add to Stack
+                  </div> )
                 : "Add to Stack"}
             </button>
           </div>

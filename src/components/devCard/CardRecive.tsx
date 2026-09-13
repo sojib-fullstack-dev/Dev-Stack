@@ -21,7 +21,7 @@ const CardRecive = ({  cardPromise ,isSelected , setIsSelected }: ICardRecivePor
         </div>
         {/* side  */}
         <div className="col-span-3">
-          <YourStack  isSelected={isSelected} />
+          <YourStack  isSelected={isSelected} setIsSelected={setIsSelected} />
         </div>
       </div>
     </>
