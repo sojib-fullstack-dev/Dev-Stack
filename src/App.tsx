@@ -6,7 +6,7 @@ import type { ICard } from "./type";
 import Footer from "./components/Footer";
 
 const cardfetch = async ():Promise<ICard[]> => {
-  const res = await fetch("/Dev-Stack/data.json");
+  const res = await fetch("/data.json");
   const data = await res.json();
   return data;
 };
