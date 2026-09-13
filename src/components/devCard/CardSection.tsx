@@ -11,8 +11,8 @@ export interface IcardType {
 
 const CardSection = ({ isSelected, setIsSelected, cardPromise }: IcardType) => {
   // console.log(cardPromise);
-  const cards = use(cardPromise);
-
+  const cards = use(cardPromise);      
+  
   const handleSelectedProps = (card: ICard) => {
     setIsSelected([...isSelected, card]);
     toast.success("selected the card", {
